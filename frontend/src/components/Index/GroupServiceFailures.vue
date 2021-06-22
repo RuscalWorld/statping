@@ -8,7 +8,7 @@
       <transition name="fade">
         <div v-if="loaded">
         <div class="d-flex mt-3">
-            <div class="flex-fill service_day" v-for="(d, index) in failureData" @mouseover="mouseover(d)" @mouseout="mouseout" :class="{'day-error': d.amount > 0, 'day-success': d.amount === 0}">
+            <div class="flex-fill service_day" v-for="(d, index) in failureData" @mouseover="mouseover(d)" @mouseout="mouseout" :class="{'day-error-high': d.amount > 20, 'day-error-medium': d.amount <= 20 && d.amount > 10, 'day-error-low': d.amount > 0 && d.amount <= 10, 'day-success': d.amount === 0}">
                 <span v-if="d.amount !== 0" class="d-none d-md-block text-center small"></span>
             </div>
         </div>

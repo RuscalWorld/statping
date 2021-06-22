@@ -49,12 +49,28 @@ A {
   background-color: lighten($day-success-background, 2%) !important;
 }
 
-.day-error {
+.day-error-high {
   background-color: $day-error-background;
+
+  &:hover {
+    background-color: lighten($day-error-background, 10%);
+  }
 }
 
-.day-error:HOVER {
-  background-color: lighten($day-error-background, 2%) !important;
+.day-error-medium {
+  background-color: lighten($day-error-background, 25%);
+
+  &:hover {
+    background-color: lighten($day-error-background, 30%);
+  }
+}
+
+.day-error-low {
+  background-color: lighten($day-error-background, 35%);
+
+  &:hover {
+    background-color: lighten($day-error-background, 40%);
+  }
 }
 
 .contain-card {
